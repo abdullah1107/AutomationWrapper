@@ -1,0 +1,95 @@
+{
+  "name" : "Login Flow",
+  "steps" : [
+    {
+      "action" : "verify",
+      "id" : "1",
+      "identifier" : "login_title",
+      "label" : "Login",
+      "position" : {
+        "x" : 160,
+        "y" : 110
+      },
+      "type" : "staticText",
+      "value" : "Login",
+      "waitTime" : 1
+    },
+    {
+      "action" : "typeText",
+      "id" : "2",
+      "identifier" : "username_field",
+      "label" : "Enter username",
+      "position" : {
+        "x" : 160,
+        "y" : 190
+      },
+      "type" : "textField",
+      "value" : "john@example.com",
+      "waitTime" : 1
+    },
+    {
+      "action" : "typeText",
+      "id" : "3",
+      "identifier" : "password_field",
+      "label" : "Enter password",
+      "position" : {
+        "x" : 160,
+        "y" : 250
+      },
+      "type" : "secureTextField",
+      "value" : "password123",
+      "waitTime" : 1
+    },
+    {
+      "action" : "toggle",
+      "id" : "4",
+      "identifier" : "remember_switch",
+      "label" : "Remember me",
+      "position" : {
+        "x" : 160,
+        "y" : 310
+      },
+      "type" : "switch",
+      "waitTime" : 1
+    },
+    {
+      "action" : "tap",
+      "id" : "5",
+      "identifier" : "login_button",
+      "label" : "Login",
+      "position" : {
+        "x" : 160,
+        "y" : 380
+      },
+      "type" : "button",
+      "waitTime" : 2
+    },
+    {
+      "action" : "verify",
+      "id" : "6",
+      "identifier" : "welcome_label",
+      "label" : "Welcome!",
+      "position" : {
+        "x" : 160,
+        "y" : 490
+      },
+      "type" : "staticText",
+      "value" : "Welcome!",
+      "waitTime" : 0
+    },
+    {
+      "action" : "verify",
+      "id" : "7",
+      "identifier" : "remember_status_label",
+      "label" : "Remember me: On",
+      "position" : {
+        "x" : 160,
+        "y" : 540
+      },
+      "type" : "staticText",
+      "value" : "Remember me: On",
+      "waitTime" : 0
+    }
+  ],
+  "version" : 1
+}

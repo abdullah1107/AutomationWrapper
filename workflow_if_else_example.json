@@ -1,0 +1,23 @@
+{
+  "bundleIdentifier" : "com.example.automation.SampleLoginApp",
+  "name" : "Login Flow with If / Else",
+  "steps" : [
+    { "id" : "1", "type" : "staticText", "identifier" : "login_title", "action" : "verify", "condition" : "equals", "value" : "Login", "waitTime" : 1 },
+    { "id" : "2", "type" : "textField", "identifier" : "username_field", "action" : "typeText", "value" : "john@example.com", "waitTime" : 1 },
+    { "id" : "3", "type" : "secureTextField", "identifier" : "password_field", "action" : "typeText", "value" : "password123", "waitTime" : 1 },
+    { "id" : "4", "type" : "switch", "identifier" : "remember_switch", "action" : "toggle", "waitTime" : 1 },
+    { "id" : "5", "type" : "button", "identifier" : "login_button", "action" : "tap", "waitTime" : 2 },
+    {
+      "id" : "6", "kind" : "if", "type" : "staticText", "identifier" : "welcome_label",
+      "condition" : "exists", "timeout" : 5,
+      "then" : [
+        { "id" : "6.T1", "type" : "staticText", "identifier" : "remember_status_label", "action" : "verify", "condition" : "equals", "value" : "Remember me: On" },
+        { "id" : "6.T2", "type" : "button", "identifier" : "logout_button", "action" : "tap", "waitTime" : 1 }
+      ],
+      "else" : [
+        { "id" : "6.E1", "type" : "staticText", "identifier" : "error_label", "action" : "verify", "condition" : "contains", "value" : "Invalid" }
+      ]
+    }
+  ],
+  "version" : 2
+}

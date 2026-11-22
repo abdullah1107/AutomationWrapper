@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "name": "Login Flow",
+  "bundleIdentifier": "com.example.automation.SampleLoginApp",
+  "steps": [
+    {
+      "id": "1",
+      "type": "staticText",
+      "identifier": "login_title",
+      "action": "verify",
+      "value": "Login",
+      "waitTime": 1
+    },
+    {
+      "id": "2",
+      "type": "textField",
+      "identifier": "username_field",
+      "action": "typeText",
+      "value": "john@example.com",
+      "waitTime": 1
+    },
+    {
+      "id": "3",
+      "type": "secureTextField",
+      "identifier": "password_field",
+      "action": "typeText",
+      "value": "password123",
+      "waitTime": 1
+    },
+    {
+      "id": "4",
+      "type": "switch",
+      "identifier": "remember_switch",
+      "action": "toggle",
+      "waitTime": 1
+    },
+    {
+      "id": "5",
+      "type": "button",
+      "identifier": "login_button",
+      "action": "tap",
+      "waitTime": 2
+    },
+    {
+      "id": "6",
+      "type": "staticText",
+      "identifier": "welcome_label",
+      "action": "verify",
+      "value": "Welcome!"
+    },
+    {
+      "id": "7",
+      "type": "staticText",
+      "identifier": "remember_status_label",
+      "action": "verify",
+      "value": "Remember me: On"
+    }
+  ]
+}
